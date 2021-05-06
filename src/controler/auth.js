@@ -10,4 +10,4 @@ export const createAccount = (email, password) => firebase.auth()
     var errorCode = error.code;
     var errorMessage = error.message;
   });
-  */
+  *///
