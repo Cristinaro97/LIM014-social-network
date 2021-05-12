@@ -1,5 +1,10 @@
 export const createAccount = (email, password) => firebase.auth()
   .createUserWithEmailAndPassword(email, password);
+export const signInGoogle = () => {
+  const auth = firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
+  return auth.signInWithPopup(provider);
+};
 /* firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in
