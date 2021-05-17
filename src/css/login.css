@@ -1,0 +1,67 @@
+body{
+    text-align: center;
+    background-image: url('../img/fondo.jpeg');
+    background-color: rgb(158, 154, 154);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+form{
+  padding: 70px;
+}
+  @media (min-width: 300px) {
+    .logo{
+      text-align: center;
+      width: 216px;
+      height: 224px;
+      left: 42%;
+      top: 60px;
+      position:absolute;
+    }
+    h1{
+      text-align: center;
+      color: #F37A5D;
+      font-family: Oleo Script;
+      font-style: italic;
+      font-weight: cursive;
+      font-size: 52px;
+      line-height: 72px;
+      }
+      .login{
+      font-family: Oxygen;
+      color: #EBF7FD;
+      width: 60px;
+      height: 25px;
+      background: #12B0AF;
+      border-radius: 25px;
+      border: 1px solid #12B0AF;
+      }
+      .google{
+      font-family: Oxygen;
+      color: #EBF7FD;
+      width: 150px;
+      height: 25px;
+      background: #12B0AF;
+      border-radius: 25px;
+      border: 1px solid #12B0AF;
+      }
+      h2{
+      font-family: Oxygen;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.7);
+      }
+      .email{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      top: -20px;
+      }
+      .pass{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      }
+  }

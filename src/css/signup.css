@@ -1,0 +1,66 @@
+
+  @media (min-width: 300px) {
+    .return{
+    position: absolute;
+    width: 281px;
+    height: 61px;
+    left: 13px;
+    top: 12px;
+    }
+    .logo{
+        text-align: center;
+        width: 216px;
+        height: 224px;
+        left: 42%;
+        top: 60px;
+        position:absolute;
+      }
+    h1{
+      display: inline-block;
+      position: relative;
+      color: #F37A5D;
+      font-family: Oleo Script;
+      font-style: italic;
+      font-weight: cursive;
+      font-size: 52px;
+      line-height: 72px;
+      }
+      .return{
+      font-family: Oxygen;
+      color: #EBF7FD;
+      width: 60px;
+      height: 25px;
+      background: #12B0AF;
+      border-radius: 25px;
+      border: 1px solid #12B0AF;
+      }
+      .fname{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      }
+      .lname{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      }
+      .email{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      }
+      .pass{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      }
+      .signup{
+      font-family: Oxygen;
+      color: #EBF7FD;
+      width: 150px;
+      height: 25px;
+      background: #12B0AF;
+      border-radius: 25px;
+      border: 1px solid #12B0AF;
+      }
+  }

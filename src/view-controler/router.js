@@ -1,5 +1,6 @@
 import { components } from '../view/index.js';
 
+console.log(components);
 const changeView = (route) => {
   const container = document.getElementById('container');
   container.innerHTML = '';
@@ -12,6 +13,8 @@ const changeView = (route) => {
     { return container.appendChild(components.login()); }
     case '#/signup':
     { return container.appendChild(components.signup()); }
+    case '#/home':
+    { return container.appendChild(components.home()); }
     default:
       break;
   }
