@@ -1,5 +1,5 @@
 
-  @media (min-width: 300px) {
+  @media (max-width: 2000px) {
     .return{
     position: absolute;
     width: 281px;

@@ -1,4 +1,6 @@
 import { components } from '../view/index.js';
+import { getDataUser } from '../controler/firestore.js';
+import { userState } from '../controler/auth.js';
 
 console.log(components);
 const changeView = (route) => {
@@ -14,7 +16,16 @@ const changeView = (route) => {
     case '#/signup':
     { return container.appendChild(components.signup()); }
     case '#/home':
-    { return container.appendChild(components.home()); }
+    {
+      userState((user) => {
+        // usuario logeado, para que no dejen entrar al usuario si es que no se ha logeado
+        if (user !== null) {
+          getDataUser(user.uid).then((doc) => container.appendChild(components.home(doc.data())));
+        }
+      });
+
+      break;
+    }
     default:
       break;
   }

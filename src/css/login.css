@@ -9,7 +9,7 @@ body{
 form{
   padding: 70px;
 }
-  @media (min-width: 300px) {
+  @media (max-width: 2000px ) {
     .logo{
       text-align: center;
       width: 216px;
