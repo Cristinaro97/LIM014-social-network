@@ -1,5 +1,5 @@
 
-  @media (max-width: 2000px) {
+  @media (min-width: 300px) {
     .return{
     position: absolute;
     width: 281px;
@@ -8,11 +8,10 @@
     top: 12px;
     }
     .logo{
-        text-align: center;
         width: 216px;
         height: 224px;
-        left: 42%;
-        top: 60px;
+        left: 50px;
+        top: 400px;
         position:absolute;
       }
     h1{

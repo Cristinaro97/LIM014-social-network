@@ -1,0 +1,32 @@
+.delete{
+    font-family: Oxygen;
+    color: #EBF7FD;
+    width: 60px;
+    height: 25px;
+    background: #12B0AF;
+    border-radius: 25px;
+    border: 1px solid #12B0AF;
+    }
+.edit{
+      font-family: Oxygen;
+      color: #EBF7FD;
+      width: 60px;
+      height: 25px;
+      background: #12B0AF;
+      border-radius: 25px;
+      border: 1px solid #12B0AF;
+      }
+.buttonpost{
+      font-family: Oxygen;
+      color: #EBF7FD;
+      width: 75px;
+      height: 25px;
+      background: #12B0AF;
+      border-radius: 25px;
+      border: 1px solid #12B0AF;
+    }
+.post{
+    border-radius: 6px;
+    width: 280px;
+    height: 100px;
+}

@@ -7,7 +7,7 @@ export default () => {
   <i></i>
     <img class="logo" src='./img/logo.png'>
    <form>
-   <p><input class="return" type="button" id="return" onclick="location.href='#/login';" value="return"></p>
+   <p><input class="return" type="button" id="return" onclick="location.href='#/login';" value="Login"></p>
    <p><input class="fname" type="text" id="firstName" placeholder="First Name"></p>
    <p><input class="lname" type="text" id="lastName" placeholder="Last Name"></p>
    <p><input class="email" type="email" id="email" placeholder="Email"></p>
