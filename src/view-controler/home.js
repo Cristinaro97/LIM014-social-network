@@ -2,6 +2,9 @@ import { addPost, getData, getPost } from '../controler/firestore.js';
 
 export default (user) => {
   const viewPosts = `
+  <nav>
+  <a class="navhome" href="#">Log out</a>
+  </nav>
   <form id="task-form">
   <h1>${`${user.firstName} ${user.lastName}`}</h1>
   <div class="flex-container">
