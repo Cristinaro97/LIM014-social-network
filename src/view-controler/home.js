@@ -1,4 +1,5 @@
-import { addPost, getData, getPost } from '../controler/firestore.js';
+import { addPost, getPost } from '../controler/firestore.js';
+import { templatePost } from '../controler/post.js';
 
 export default (user) => {
   const viewPosts = `
@@ -19,20 +20,19 @@ export default (user) => {
 
   const postText = divElem.querySelector('#post');
   postText.addEventListener('click', () => {
-    const area = document.querySelector('#description').value; // captura lo que ingresa el usuario, valor de la etiqueta
+    const area = divElem.querySelector('#description').value; // captura lo que ingresa el usuario, valor de la etiqueta
     addPost(area, user.userId);
-    // document.addEventListener('keydown', getEventType, false);
-    // area.addEventListener();
-    /* addPost(description, user, date, photo, like, coment); */
   });
-  // const postPrint = document.createElement('div');
-  // area.innerHTML = postPrint;
-  getPost((post) => {
-    getData(post, divElem);
+
+  // acá es mi contenedor de posts
+  const sectionPost = divElem.querySelector('#sectionPost');
+
+  // acá recibo la data de los posts
+  getPost((postData) => {
+    console.log('INFO DEL POST', postData);
+    sectionPost.innerHTML = '';
+    templatePost(sectionPost, postData);
   });
+
   return divElem;
 };
-
-/* const divPost = document.createElement('div');
-divPost.innerHTML += `<div class="flex-container">
-<div><textarea id="description" class="post" >${doc.description}</textarea></div>` */

@@ -1,5 +1,3 @@
-import { templatePost } from './post.js';
-
 const db = firebase.firestore();
 export const userCollection = (userId, firstName, lastName, email, password) => db.collection('users').doc(userId).set({
   userId,
@@ -31,20 +29,3 @@ export const getPost = (callback) => {
     });
 };
 export const deletePost = (data) => db.collection('posts').doc(data).delete();
-export const getData = (post) => {
-  const sectionPost = document.querySelector('#sectionPost');
-  console.log(sectionPost);
-  sectionPost.innerHTML = '';
-  if (post.length) {
-    post.forEach((doc) => {
-      const section = templatePost(doc);
-      console.log(section);
-      sectionPost.appendChild(section);
-      const deleteButton = sectionPost.querySelector('#delete');
-      deleteButton.addEventListener('click', (e) => {
-        const idPost = e.target.dataset.id;
-        deletePost(idPost);
-      });
-    });
-  }
-};
