@@ -2,24 +2,15 @@
     background-color: #EBF7FD;
     border-radius: 6px;
 }
-.delete{
+.delete, .edit, .save{
     font-family: Oxygen;
     color: #EBF7FD;
     width: 60px;
-    height: 25px;
+    height: 20px;
     background: #12B0AF;
     border-radius: 25px;
     border: 1px solid #12B0AF;
     }
-.edit{
-      font-family: Oxygen;
-      color: #EBF7FD;
-      width: 60px;
-      height: 25px;
-      background: #12B0AF;
-      border-radius: 25px;
-      border: 1px solid #12B0AF;
-      }
 .buttonpost{
       font-family: Oxygen;
       color: #EBF7FD;

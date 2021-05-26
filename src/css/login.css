@@ -16,13 +16,11 @@ body{
       position:absolute;
     }
     h1{
-      text-align: center;
-      color: #F37A5D;
-      font-family: Oleo Script;
-      font-style: italic;
-      font-weight: cursive;
-      font-size: 52px;
-      line-height: 72px;
+    font-family: roboto;
+    color: #F5EBDC;
+    margin: 0;
+    font-size: 0px;
+    padding-left: 10px;
       }
       .login{
       font-family: Oxygen;
