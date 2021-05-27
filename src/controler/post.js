@@ -5,9 +5,9 @@ export const templatePost = (container, dataDoc) => {
     const section = document.createElement('div');
     const template = `<div class="flex-container" id="containerPost">
     <p id="description" class="post">  ${doc.description}</p>
-    <button id="delete" class="delete" data-id=${doc.id}>delete</button>
+    <div class="buttoncitos"><button id="delete" class="delete" data-id=${doc.id}>delete</button>
     <button id="edit" class="edit" data-id=${doc.id}>edit</button>
-    <button id="save" class="save" data-id=${doc.id}>save</button>
+    <button id="save" class="save" data-id=${doc.id}>save</button></div>
     </div>`;
     section.innerHTML = template;
     const deleteButton = section.querySelector('#delete');

@@ -1,21 +1,74 @@
 @media (min-width: 300px) {
-.navhome{
-    font-family: Oxygen;
-    color: #EBF7FD;
-    background: #12B0AF;
-    border-radius: 25px;
-    border: 1px solid #12B0AF;
-    font-size: 10px;
+    button#menu {
+        display: none;
+    }
+    
+    button#menu:focus + nav#superior {
+        /* Si es pulsado el boton, mostramos el nav.
+        Esto lo puedo hacer porque adquiere el foco.
+        Solo funcionará, si el botón y el menú esta a la misma altura. */
+        display: block;
+    }
+    
+    nav#superior ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav#superior ul a {
+        display: block;
+        width: 8em;
+        text-decoration: none;
+        border: 1px solid #12B0AF ;
+        padding: .3em 0;
+        text-align: center;
+        color: white;
+        font-family: roboto;
+        background: #12B0AF ;
+        transition: 1s all;
+    }
+    
+    nav#superior ul a:hover {
+        background: #F37A5D  ;
+    }
+    
+    @media all and (max-width: 700px) {
+        /* En smartphone mostramos el botón */
+        button#menu {
+            display: block;
+        }
+        nav#superior {
+            display: none;
+        }
+        nav#superior ul {
+            flex-direction: column;
+        }
+    }
+.dukigram{
+color: #F37A5D;
+display: flex;
+justify-content: flex-end;
+font-size: 20px;
+font-family: Oleo Script;
+font-style: italic;
+font-weight: bold;
+margin-top: -20px;
+margin-bottom: 10px;
+
 }
-};
 .create-post {
     border-radius: 20px;
-    width: 40%;
     padding: 12px 16px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
   }
   .create-post h2 {
     font-family: roboto;
-    color: #F5EBDC;
+    color: white;
     margin: 0;
     font-size: 15px;
     padding-left: 10px;
@@ -35,7 +88,20 @@
     padding: 5px 15px 20px;
     border: none;
   }
-  .sectionPost, .create-post{
+  .sectionPost{
+    font-family: roboto;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 0;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    padding: 6px;
+  }
+  .create-post{
     font-family: roboto;
     color: black;
     font-size: 14px;
@@ -49,3 +115,4 @@
     letter-spacing: 0.04em;
     padding: 6px;
   }
+};

@@ -1,14 +1,20 @@
 import { addPost, getPost } from '../controler/firestore.js';
 import { templatePost } from '../controler/post.js';
+import { logout } from '../controler/auth.js';
 
 export default (user) => {
   const viewPosts = `
-  <nav>
-  <a class="navhome" href="#">Log out</a>
+  <button id="menu">menu</button>
+  <nav id="superior">
+    <ul>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a id="logout" href="#/login">Log out</a></li>
+    </ul>
   </nav>
-  <h1>${`${user.firstName} ${user.lastName}`}</h1>
+  <section class="dukigram">Dukigram</section>
   <article class = "create-post">
-  <h2>Share your moments</h2>
+  <h2>${`${user.firstName} ${user.lastName}`}</h2>
   <div class="img-textPost">
     <svg height="60" width="80">
       <circle cx="30" cy="30" r="25"/>
@@ -22,6 +28,15 @@ export default (user) => {
   const divElem = document.createElement('div');
   divElem.innerHTML = viewPosts;
 
+  // log out
+  const buttonLogout = divElem.querySelector('#logout');
+  buttonLogout.addEventListener('click', (e) => {
+    console.log('aaaa');
+    e.preventDefault();
+    logout().then(() => {
+      window.location.hash = '#/login';
+    });
+  });
   const postText = divElem.querySelector('#post');
   postText.addEventListener('click', () => {
     const area = divElem.querySelector('#textarea').value; // captura lo que ingresa el usuario, valor de la etiqueta

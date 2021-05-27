@@ -8,6 +8,7 @@ export const signInGoogle = () => {
   return auth.signInWithPopup(provider);
 };
 export const userState = (user) => firebase.auth().onAuthStateChanged(user);
+export const logout = () => firebase.auth().signOut();
 // user = funcion y userState= funcion callback
 /* firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
