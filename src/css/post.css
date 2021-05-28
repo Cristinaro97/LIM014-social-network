@@ -12,6 +12,11 @@ display: flex;
 justify-content: flex-end;
 justify-content: space-around;
 }
+h3{
+    margin: 20px;
+    padding: 0px;
+
+}
 .delete, .edit, .save{
     font-family: Oxygen;
     color: #EBF7FD;

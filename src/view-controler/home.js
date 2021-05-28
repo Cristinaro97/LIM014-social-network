@@ -47,7 +47,7 @@ export default (user) => {
   const postText = divElem.querySelector('#post');
   postText.addEventListener('click', () => {
     const area = divElem.querySelector('#textarea').value; // captura lo que ingresa el usuario, valor de la etiqueta
-    addPost(area, user.userId);
+    addPost(area, user.userId, user.firstName);
     divElem.querySelector('#textarea').value = '';
   });
 

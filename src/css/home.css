@@ -1,4 +1,8 @@
 @media (min-width: 300px) {
+#menu{
+    margin: 0px;
+    padding: 0px;
+}    
 #superior{
     margin: auto;
     width: 200px;

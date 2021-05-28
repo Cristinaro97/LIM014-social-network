@@ -7,16 +7,35 @@ export const userCollection = (userId, firstName, lastName, email, password) => 
   password,
 });
 export const getDataUser = (currentUser) => db.collection('users').doc(currentUser).get();
-export const addPost = (description, user) => {
+const datePostDB = () => {
+  const datePost = {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  };
+  const timePost = {
+    hour12: 'true',
+    hour: 'numeric',
+    minute: 'numeric',
+  };
+  const date = new Date().toLocaleDateString('es-Es', datePost);
+  const time = new Date().toLocaleTimeString('es-Es', timePost);
+  const dateTime = `${date} ${time}`;
+
+  return dateTime;
+};
+export const addPost = (description, user, userName) => {
   db.collection('posts').add({
     description,
     user,
-    date: firebase.firestore.FieldValue.serverTimestamp(),
+    date: datePostDB(),
     photo: '',
     like: '',
     coment: '',
+    userName,
   });
 };
+
 export const getPost = (callback) => {
   console.log(Date.now());
   return db.collection('posts').orderBy('date', 'desc')

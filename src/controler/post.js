@@ -4,6 +4,11 @@ export const templatePost = (container, dataDoc) => {
   dataDoc.forEach((doc) => {
     const section = document.createElement('div');
     const template = `<div class="flex-container" id="containerPost">
+    <h3>${doc.userName}</h3>
+    <h4>${doc.date}</h4>
+    <svg class="circle" height="60" width="80">
+      <circle cx="30" cy="30" r="25"/>
+    </svg>
     <p id="description" class="post">  ${doc.description}</p>
     <div class="buttoncitos"><button id="delete" class="delete" data-id=${doc.id}>delete</button>
     <button id="edit" class="edit" data-id=${doc.id}>edit</button>
