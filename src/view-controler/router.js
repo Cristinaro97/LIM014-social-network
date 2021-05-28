@@ -20,7 +20,10 @@ const changeView = (route) => {
       userState((user) => {
         // usuario logeado, para que no dejen entrar al usuario si es que no se ha logeado
         if (user !== null) {
-          getDataUser(user.uid).then((doc) => container.appendChild(components.home(doc.data())));
+          getDataUser(user.uid).then((doc) => {
+            container.innerHTML = ''; // limpia el texto
+            container.appendChild(components.home(doc.data()));
+          });
         }
       });
 

@@ -1,39 +1,30 @@
 @media (min-width: 300px) {
-    button#menu {
-        display: none;
-    }
-    
-    button#menu:focus + nav#superior {
-        /* Si es pulsado el boton, mostramos el nav.
-        Esto lo puedo hacer porque adquiere el foco.
-        Solo funcionará, si el botón y el menú esta a la misma altura. */
-        display: block;
-    }
-    
-    nav#superior ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav#superior ul a {
-        display: block;
-        width: 8em;
-        text-decoration: none;
-        border: 1px solid #12B0AF ;
-        padding: .3em 0;
-        text-align: center;
-        color: white;
-        font-family: roboto;
-        background: #12B0AF ;
-        transition: 1s all;
-    }
-    
-    nav#superior ul a:hover {
-        background: #F37A5D  ;
-    }
-    
+#superior{
+    margin: auto;
+    width: 200px;
+    font-family: roboto;
+}
+ul{
+    list-style: none;
+}
+.nav li a {
+background-color: #12B0AF;
+color: white;
+text-decoration: none;
+padding: 10px 15px;
+display: block;
+}   
+.nav li a:hover {
+    background-color: #F37A5D;
+}
+.nav li ul {
+display: none;
+position: absolute;
+min-width: 100px;
+}
+.nav li:hover > ul{
+    display: block;
+}
     @media all and (max-width: 700px) {
         /* En smartphone mostramos el botón */
         button#menu {
@@ -54,8 +45,7 @@ font-size: 20px;
 font-family: Oleo Script;
 font-style: italic;
 font-weight: bold;
-margin-top: -20px;
-margin-bottom: 10px;
+
 
 }
 .create-post {

@@ -4,14 +4,16 @@ import { logout } from '../controler/auth.js';
 
 export default (user) => {
   const viewPosts = `
-  <button id="menu">menu</button>
-  <nav id="superior">
-    <ul>
-      <li><a href="#">Profile</a></li>
+  <div id="superior">
+    <ul class="nav">
+      <li class="menu"><a>menu</a>
+      <ul id='divs'><li><a href="#">Profile</a></li>
       <li><a href="#">Settings</a></li>
       <li><a id="logout" href="#/login">Log out</a></li>
+      </ul>
+      </li>
     </ul>
-  </nav>
+  </div>
   <section class="dukigram">Dukigram</section>
   <article class = "create-post">
   <h2>${`${user.firstName} ${user.lastName}`}</h2>
@@ -28,6 +30,11 @@ export default (user) => {
   const divElem = document.createElement('div');
   divElem.innerHTML = viewPosts;
 
+  // menu desplegable
+  const menu = divElem.querySelector('.menu');
+  menu.addEventListener('click', (e) => {
+    divElem.querySelector('#divs').style.display = 'block';
+  });
   // log out
   const buttonLogout = divElem.querySelector('#logout');
   buttonLogout.addEventListener('click', (e) => {
@@ -41,6 +48,7 @@ export default (user) => {
   postText.addEventListener('click', () => {
     const area = divElem.querySelector('#textarea').value; // captura lo que ingresa el usuario, valor de la etiqueta
     addPost(area, user.userId);
+    divElem.querySelector('#textarea').value = '';
   });
 
   // acá es mi contenedor de posts
