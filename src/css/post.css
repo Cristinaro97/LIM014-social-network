@@ -7,6 +7,9 @@
     display: flex;
     flex-direction: column;
 }
+.farfa-heart{
+color: black;
+}
 .buttoncitos{
 display: flex;
 justify-content: flex-end;

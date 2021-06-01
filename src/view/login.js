@@ -9,7 +9,11 @@ export default () => {
     <p><input class="email" type="email" id="email" placeholder="Email"></p>
     <p><input class="pass" type="password" id="txtPass" placeholder="Password"></p>
     <p><input class="login" type="button" id="Login" value="Login"></p>
-    <p><button class="google" type="submit" id="logGoogle">Login with Google</button></p>
+    <h2>Or sign in with</h2>
+    <img src="https://image.flaticon.com/icons/png/512/300/300221.png" 
+    class="google" id="logGoogle">
+    <img src="https://image.flaticon.com/icons/png/512/733/733547.png" 
+    class="facebook" id="logFacebook">
     <h2>You don't have an account? <a href="#/signup">SIGN UP</a></h2>
     </form>
     `;

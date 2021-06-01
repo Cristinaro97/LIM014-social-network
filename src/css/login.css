@@ -7,7 +7,14 @@ body{
     background-size: cover;
   }
 }
-
+.google{
+  width: 20px;
+  height: 20px;
+}
+.facebook{
+  width: 20px;
+  height: 20px;
+}
     .logo{
       width: 216px;
       height: 224px;
@@ -26,15 +33,6 @@ body{
       font-family: Oxygen;
       color: #EBF7FD;
       width: 60px;
-      height: 25px;
-      background: #12B0AF;
-      border-radius: 25px;
-      border: 1px solid #12B0AF;
-      }
-      .google{
-      font-family: Oxygen;
-      color: #EBF7FD;
-      width: 150px;
       height: 25px;
       background: #12B0AF;
       border-radius: 25px;

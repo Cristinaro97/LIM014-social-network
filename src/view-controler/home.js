@@ -58,7 +58,7 @@ export default (user) => {
   getPost((postData) => {
     console.log('INFO DEL POST', postData);
     sectionPost.innerHTML = '';
-    templatePost(sectionPost, postData);
+    templatePost(sectionPost, postData, user);
   });
 
   return divElem;

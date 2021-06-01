@@ -1,3 +1,4 @@
+/*USER*/
 const db = firebase.firestore();
 export const userCollection = (userId, firstName, lastName, email, password) => db.collection('users').doc(userId).set({
   userId,
@@ -24,18 +25,21 @@ const datePostDB = () => {
 
   return dateTime;
 };
-export const addPost = (description, user, userName) => {
+/*POST*/
+export const addPost = (description, userId, userName) => {
   db.collection('posts').add({
     description,
-    user,
+    userId,
     date: datePostDB(),
     photo: '',
-    like: '',
+    like: [],
     coment: '',
     userName,
   });
 };
-
+export const likes = (idPost, like) => {
+  db.collection('posts').doc(idPost).update({ like });
+};
 export const getPost = (callback) => {
   console.log(Date.now());
   return db.collection('posts').orderBy('date', 'desc')
