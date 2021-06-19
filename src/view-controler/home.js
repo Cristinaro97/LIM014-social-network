@@ -32,13 +32,13 @@ export default (user) => {
 
   // menu desplegable
   const menu = divElem.querySelector('.menu');
-  menu.addEventListener('click', (e) => {
+  menu.addEventListener('click', () => {
     divElem.querySelector('#divs').style.display = 'block';
   });
   // log out
   const buttonLogout = divElem.querySelector('#logout');
   buttonLogout.addEventListener('click', (e) => {
-    console.log('aaaa');
+    // console.log('aaaa');
     e.preventDefault();
     logout().then(() => {
       window.location.hash = '#/login';
@@ -56,7 +56,7 @@ export default (user) => {
 
   // acá recibo la data de los posts
   getPost((postData) => {
-    console.log('INFO DEL POST', postData);
+    // console.log('INFO DEL POST', postData);
     sectionPost.innerHTML = '';
     templatePost(sectionPost, postData, user);
   });

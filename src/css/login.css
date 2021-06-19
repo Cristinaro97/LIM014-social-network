@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @media (min-width: 300px) {
 body{
     text-align: center;
@@ -23,14 +24,14 @@ body{
       position:absolute;
     }
     h1{
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
     color: #F5EBDC;
     margin: 0;
     font-size: 0px;
     padding-left: 10px;
       }
       .login{
-      font-family: Oxygen;
+      font-family: 'Roboto', sans-serif;
       color: #EBF7FD;
       width: 60px;
       height: 25px;
@@ -39,7 +40,7 @@ body{
       border: 1px solid #12B0AF;
       }
       h2{
-      font-family: Oxygen;
+      font-family: 'Roboto', sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 11px;
@@ -56,4 +57,4 @@ body{
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
       border: 1px solid white;
       border-radius: 10px;
-      };
+      }

@@ -9,15 +9,3 @@ export const signInGoogle = () => {
 };
 export const userState = (user) => firebase.auth().onAuthStateChanged(user);
 export const logout = () => firebase.auth().signOut();
-// user = funcion y userState= funcion callback
-/* firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
-  *///

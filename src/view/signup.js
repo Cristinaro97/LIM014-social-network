@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { createAccount } from '../controler/auth.js';
 import { userCollection } from '../controler/firestore.js';
 
@@ -23,12 +24,12 @@ export default () => {
     event.preventDefault();
     const email = divElem.querySelector('#email').value;
     const password = divElem.querySelector('#txtPass').value;
-    createAccount(email, password).then((result) => {
+    createAccount(email, password).then(() => {
       const userId = firebase.auth().currentUser;
       const firstName = divElem.querySelector('#firstName').value;
       const lastName = divElem.querySelector('#lastName').value;
       userCollection(userId.uid, firstName, lastName, email, password);
-      console.log(result);
+      // console.log(result);
       window.alert('Se registró correctamente');
       window.location.hash = '#/home';
     });

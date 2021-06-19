@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Roboto:wght@100&display=swap');
 @media (min-width: 300px) {
 #menu{
     margin: 0px;
@@ -6,7 +8,7 @@
 #superior{
     margin: auto;
     width: 200px;
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 ul{
     list-style: none;
@@ -46,22 +48,30 @@ color: #F37A5D;
 display: flex;
 justify-content: flex-end;
 font-size: 20px;
-font-family: Oleo Script;
+font-family: 'Oleo Script Swash Caps', cursive;
 font-style: italic;
 font-weight: bold;
-
-
 }
 .create-post {
-    border-radius: 20px;
     padding: 12px 16px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 14px;
+    background-color: #F37A5D ;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 0;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
   }
   .create-post h2 {
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
     color: white;
     margin: 0;
     font-size: 15px;
@@ -83,7 +93,7 @@ font-weight: bold;
     border: none;
   }
   .sectionPost{
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
     color: black;
     font-size: 14px;
     border-radius: 5px;
@@ -95,18 +105,4 @@ font-weight: bold;
     letter-spacing: 0.04em;
     padding: 6px;
   }
-  .create-post{
-    font-family: roboto;
-    color: black;
-    font-size: 14px;
-    background-color: #F37A5D ;
-    border-radius: 5px;
-    outline: none;
-    box-sizing: border-box;
-    border: 0;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.04em;
-    padding: 6px;
-  }
-};
+}

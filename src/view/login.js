@@ -25,8 +25,8 @@ export default () => {
     event.preventDefault();
     const email = divElem.querySelector('#email').value;
     const password = divElem.querySelector('#txtPass').value;
-    login(email, password).then((result) => {
-      console.log(result);
+    login(email, password).then(() => {
+      // console.log(result);
       window.location.hash = '#/home';
     });
   });
@@ -34,11 +34,11 @@ export default () => {
   const logGoogle = divElem.querySelector('#logGoogle');
   logGoogle.addEventListener('click', () => {
     signInGoogle()
-      .then((result) => {
-        console.log('google sign in', result);
+      .then(() => {
+        // console.log('google sign in', result);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // console.log(err);
       });
   });
   return divElem;

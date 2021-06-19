@@ -1,4 +1,5 @@
-/*USER*/
+/* eslint-disable no-console */
+// USER
 const db = firebase.firestore();
 export const userCollection = (userId, firstName, lastName, email, password) => db.collection('users').doc(userId).set({
   userId,
@@ -25,7 +26,7 @@ const datePostDB = () => {
 
   return dateTime;
 };
-/*POST*/
+/* POST */
 export const addPost = (description, userId, userName) => {
   db.collection('posts').add({
     description,

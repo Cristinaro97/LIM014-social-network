@@ -25,12 +25,12 @@ export const templatePost = (container, dataDoc, user) => {
       deletePost(idPost);
     });
     const likesButton = section.querySelector('#like');
-    likesButton.addEventListener('click', (e) => {
+    likesButton.addEventListener('click', () => {
       const getLike = doc.like.indexOf(user.userId);
       if (getLike === -1) {
         doc.like.push(user.userId); likes(doc.id, doc.like);
-        console.log('kkkkk', user.likes);
-        console.log('ooooo', user.id);
+        // console.log('kkkkk', user.likes);
+        // console.log('ooooo', user.id);
       } else {
         doc.like.splice(user, 1);
         likes(doc.id, doc.like);
@@ -39,7 +39,7 @@ export const templatePost = (container, dataDoc, user) => {
     const editButton = section.querySelector('#edit');
     const saveButton = section.querySelector('#save');
     editButton.addEventListener('click', () => {
-      console.log(editButton);
+      // console.log(editButton);
       const editId = section.querySelector('#description');
       editId.contentEditable = 'true';
       editId.focus();
@@ -62,5 +62,5 @@ export const templatePost = (container, dataDoc, user) => {
     }
     return container.appendChild(section);
   });
-  console.log('poSSSSSSSSSSSSSSSSSSSSST', dataDoc);
+  // console.log('poSSSSSSSSSSSSSSSSSSSSST', dataDoc);
 };

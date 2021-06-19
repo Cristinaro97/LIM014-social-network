@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { components } from '../view/index.js';
 import { getDataUser } from '../controler/firestore.js';
 import { userState } from '../controler/auth.js';
