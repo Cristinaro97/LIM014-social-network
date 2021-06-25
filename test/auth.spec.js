@@ -12,6 +12,7 @@ const mockauth = new firebasemock.MockFirebase(); mockauth.autoFlush();
 global.firebase = firebasemock.MockFirebaseSdk(() => null, () => mockauth);
 
 describe('function for the login with email and password', () => {
+  // login
   it('Is a function', () => {
     expect(typeof login).toBe('function');
   });

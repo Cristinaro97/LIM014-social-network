@@ -1,39 +1,37 @@
 import MockFirebase from 'mock-cloud-firestore';
-import {} from '../src/controler/auth';
+import { userCollection } from '../src/controler/firestore.js';
 
 const fixtureData = {
   __collection__: {
     post: {
       __doc__: {
         Post001: {
-          userId: '001',
-          name: 'Chio',
-          description: 'No me testeen',
-          privacy: 'Publico',
-          date: '20 de mayo 2021',
-          likes: [],
-          imageURL: 'src/img/perrito3.0.png',
+          coment: '',
+          date: '31 may. 2021 11:49 p. m.',
+          description: 'Holis puerca',
+          like: [],
+          photo: '',
+          userId: 'Rm3LPOvdNmf7t3uVlclA9t3agFE2',
+          userName: 'Aldo',
         },
         Post002: {
-          userId: '002',
-          name: 'Bri',
-          description: 'GG',
-          privacy: 'Publico',
-          date: '22 de mayo 2021',
-          likes: ['001', '002'],
-          imageURL: 'src/img/perrito3.0.png',
+          coment: '',
+          date: '31 may. 2021 7:37 p. m.',
+          description: 'Hola chio',
+          like: [],
+          photo: '',
+          userId: 'znNv9JQ9iSWHTYn0ketvIy8rK7U2',
+          userName: 'Cristina',
         },
       },
     },
-    comments: {
+    users: {
       __doc__: {
-        comment001: {
-          comment: 'well',
-          date: '20 may 2021',
-          imageURL: 'src/img/perrito3.0.png',
-          userId: '002',
-          username: 'Thais',
-        },
+        email: 'betsyvi@hotmail.com',
+        firstName: 'Betsy',
+        lastName: 'Vidal',
+        password: '12345678',
+        userId: '8VNRj4OqkXPKqHHk4BW8U21RN5m1',
       },
     },
   },
@@ -41,3 +39,12 @@ const fixtureData = {
 
 // Instancia de la libreria
 global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled: true });
+
+// userCollection
+it('Is a function', () => {
+  expect(typeof userCollection).toBe('function');
+});
+/* it('should be log with email and password', ()
+=> login('cristina@example.com', 'examplePass').then((user) => {
+  expect(user.email).toBe('cristina@example.com');
+})); */
