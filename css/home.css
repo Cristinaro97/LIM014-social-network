@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Roboto:wght@100&display=swap');
+@media (min-width: 300px) {
+#menu{
+    margin: 0px;
+    padding: 0px;
+}    
+#superior{
+    margin: auto;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.nav li a {
+background-color: #12B0AF;
+color: white;
+text-decoration: none;
+padding: 10px 15px;
+display: block;
+}   
+.nav li a:hover {
+    background-color: #F37A5D;
+}
+.nav li ul {
+display: none;
+position: absolute;
+min-width: 100px;
+}
+.nav li:hover > ul{
+    display: block;
+}
+    @media all and (max-width: 700px) {
+        /* En smartphone mostramos el botón */
+        button#menu {
+            display: block;
+        }
+        nav#superior {
+            display: none;
+        }
+        nav#superior ul {
+            flex-direction: column;
+        }
+    }
+.dukigram{
+color: #F37A5D;
+display: flex;
+justify-content: flex-end;
+font-size: 20px;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-style: italic;
+font-weight: bold;
+}
+.create-post {
+    padding: 12px 16px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 14px;
+    background-color: #F37A5D ;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 0;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+  .create-post h2 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .img-textPost {
+    display: flex;
+    margin: 8px 0 0 0;
+  }
+  .create-post input {
+    border-radius: 40px;
+    resize: none;
+    overflow: auto;
+    width: 90%;
+    height: 20px;
+    margin: 5px 0;
+    outline: none;
+    padding: 5px 15px 20px;
+    border: none;
+  }
+  .sectionPost{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 0;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    padding: 6px;
+  }
+}
